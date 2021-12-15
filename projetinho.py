@@ -271,6 +271,8 @@ def EstimaPI():
     print("Estimativa: " + str(pi))
 
     EsperaTecla()
+
+    return False
 # FIM DA LÓGICA DE ESTIMA PI
 
 # LÓGICA DE ESTIMA EULER
@@ -298,6 +300,8 @@ def EstimaEuler():
     print("Estimativa: " + str(euler))
 
     EsperaTecla()
+
+    return False
 # FIM DA LÓGICA DE ESTIMA EULER
 
 # LÓGICA DE NOTHING
@@ -311,11 +315,11 @@ def Creditos():
     creditos = """
      ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄   Projetinho realizado para finalização
     █────────▄▄▄▄▄▄────────█  do módulo de programação em .NET C#,
-    █──────█▀──────▀█──────█  alternando em versões.
-    █─────█─▄▀█──█▀▄─█─────█
-    █────▐▌──────────▐▌────█  user: vinicioslop
-    █────█▌▀▄──▄▄──▄▀▐█────█  link: https://vinicioslop.github.io/projeto_2021-2/
-    █───▐██──▀▀──▀▀──██▌───█
+    █──────█▀──────▀█──────█  agora uma versão desenvolvida usando
+    █─────█─▄▀█──█▀▄─█─────█  a linguagem Python.
+    █────▐▌──────────▐▌────█  
+    █────█▌▀▄──▄▄──▄▀▐█────█  user: vinicioslop
+    █───▐██──▀▀──▀▀──██▌───█  link: https://vinicioslop.github.io/projeto_2021-2/
     █──▄████▄──▐▌──▄████▄──█
      ▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀
     """
@@ -356,19 +360,19 @@ def opcoes_pagina01(opcao):
 
 def opcoes_pagina02(opcao):        
     if opcao == 1:
-        EstimaPI()
+        sair = EstimaPI()
     elif opcao == 2:
-        EstimaEuler()
+        sair = EstimaEuler()
     elif opcao == 3:
-        Nothing()
+        sair = Nothing()
     elif opcao == 4:
-        Nothing()
+        sair = Nothing()
     elif opcao == 5:
-        Nothing()
+        sair = Nothing()
     elif opcao == 6:
-        Nothing()
+        sair = Nothing()
     elif opcao == 7:
-        Nothing()
+        sair = Nothing()
     elif opcao == 8:
         sair = Creditos()
     else:
