@@ -52,12 +52,14 @@ def paginas(pagina):
 # FINAL DO DIRECIONAMENTO DE PÁGINAS
 
 # LÓGICA DE PARADA
-def espera_tecla():
+def EsperaTecla():
     input("Pressione qualquer tecla para continuar...")
 # FINAL DA LÓGICA DE PARADA
 
 # LÓGICA DE SOMA
 def Somar():
+    console
+
     barra = """
     +**************************************************+
     | ████████████████████ SOMA ██████████████████████ |
@@ -73,7 +75,7 @@ def Somar():
 
     print(str(valor01) + " + " + str(valor02) + " = " + str(sum))
 
-    espera_tecla()
+    EsperaTecla()
 # FINAL DA LÓGICA DE SOMA
 
 # LÓGICA DE SUBTRAÇÃO
@@ -93,7 +95,7 @@ def Subtrair():
 
     print(str(valor01) + " - " + str(valor02) + " = " + str(sub))
 
-    espera_tecla()
+    EsperaTecla()
 # FINAL DA LÓGICA DE SUBTRAÇÃO
 
 # LÓGICA DE MULTIPLICAÇÃO
@@ -113,7 +115,7 @@ def Multiplicar():
 
     print(str(valor01) + " x " + str(valor02) + " = " + str(mult))
 
-    espera_tecla()
+    EsperaTecla()
 # FINAL DA LÓGICA DE MULTIPLICAÇÃO
 
 # LÓGICA DE DIVISÃO
@@ -133,7 +135,7 @@ def Dividir():
 
     print(str(valor01) + " / " + str(valor02) + " = " + str(div))
 
-    espera_tecla()
+    EsperaTecla()
 # FINAL DA LÓGICA DE DIVISÃO
 
 # LÓGICA DE EXPONENCIAÇÃO
@@ -153,12 +155,185 @@ def Exponenciacao():
 
     print(str(valorBase) + " ^ " + str(valorExpoente) + " = " + str(potencia))
 
-    espera_tecla()
+    EsperaTecla()
 # FINAL DA LÓGICA DE EXPONENCIAÇÃO
+
+# LÓGICA DE RADICIAÇÃO
+def Radiciacao():
+    barra = """
+    +**************************************************+
+    | █████████████████ RADICIAÇÃO ███████████████████ |
+    +==================================================+
+    """
+
+    print(barra + "\n")
+
+    radicando = float(input("Informe o radicando: "))
+    indice = float(input("Informe o índice...: "))
+
+    resultado = radicando ** (1 / indice)
+
+    print("O resultado é " + str(resultado))
+
+    EsperaTecla()
+# FINAL DA LÓGICA DE RADICIAÇÃO
+
+# LÓGICA DE FATORIAL
+def calcFat(valor):
+    fat = 1
+
+    if valor == 0:
+        return fat
+
+    x = 2
+    while x <= valor:
+        fat *= x
+        x += x
+
+    return fat
+def Fatorial():
+    barra = """
+    +**************************************************+
+    | ███████████████████ FATORIAL ███████████████████ |
+    +==================================================+
+    """
+
+    print(barra + "\n")
+
+    entrada = int(input("Informe um valor inteiro: "))
+
+    fat = calcFat(entrada)
+
+    print(str(entrada) + "! = " + str(fat))
+
+    EsperaTecla()
+# FINAL DA LÓGICA DE FATORIAL
+
+# LÓGICA DE MDC
+def MDC():
+    barra = """
+    +**************************************************+
+    | ███████ MÁXIMO DIVISOR COMUM (ITERATIVO) ███████ |
+    +==================================================+
+    """
+
+    print(barra + "\n")
+
+    valorA = float(input("Informe o 1º número (a): "))
+    valorB = float(input("Informe o 2º número (b): "))
+
+    r = -1
+
+    while not valorB == 0:
+        r = valorA % valorB
+        valorA = valorB
+        valorB = r
+
+    mdc = valorA
+
+    print("MDC (a, b) = " + str(mdc))
+
+    EsperaTecla()
+# FINAL DA LÓGICA DE MDC
+
+# LÓGICA DE ESTIMA PI
+def EstimaPI():
+    barra = """
+    +**************************************************+
+    | ███████████████████ ESTIMA PI ██████████████████ |
+    +==================================================+
+    """
+
+    print(barra + "\n")
+
+    iteracoes = int(input("Quantas iteracões? "))
+
+    if iteracoes < 1:
+        print("Quantidade de iterações inválida! Precisa ser maior ou igual a 1.")
+        EsperaTecla()
+        return
+
+    pi = 0
+    aux = 3
+    
+    for i in range(iteracoes - 1):
+        if i % 2 == 0:
+            pi += 1 / aux
+            aux += 2
+        else:
+            pi -= 1 / aux
+            aux += 2
+
+    pi = pi - 1
+    pi = pi * 4
+    pi = pi * (-1)
+
+    print("Estimativa: " + str(pi))
+
+    EsperaTecla()
+# FIM DA LÓGICA DE ESTIMA PI
+
+# LÓGICA DE ESTIMA EULER
+def EstimaEuler():
+    barra = """
+    +**************************************************+"
+    | ██████████████████ ESTIMA EULER ████████████████ |"
+    +==================================================+
+    """
+
+    print(barra + "\n")
+
+    iteracoes = int(input("Quantidade de iterações? "))
+
+    if iteracoes < 1:
+        print("Quantidade de iterações inválida! Precisa ser maior ou igual a 1.")
+        EsperaTecla()
+        return
+
+    euler = 0
+    
+    for i in range(iteracoes):
+        euler += 1.0 / calcFat(i)
+
+    print("Estimativa: " + str(euler))
+
+    EsperaTecla()
+# FIM DA LÓGICA DE ESTIMA EULER
+
+# LÓGICA DE NOTHING
+def Nothing():
+    print("There is nothing to see here, go away!!!")
+    EsperaTecla()
+# FIM DA LÓGICA DE NOTHING
+
+# LÓGICA DE CRÉDITOS
+def Creditos():
+    creditos = """
+     ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄   Projetinho realizado para finalização
+    █────────▄▄▄▄▄▄────────█  do módulo de programação em .NET C#,
+    █──────█▀──────▀█──────█  alternando em versões.
+    █─────█─▄▀█──█▀▄─█─────█
+    █────▐▌──────────▐▌────█  user: vinicioslop
+    █────█▌▀▄──▄▄──▄▀▐█────█  link: https://vinicioslop.github.io/projeto_2021-2/
+    █───▐██──▀▀──▀▀──██▌───█
+    █──▄████▄──▐▌──▄████▄──█
+     ▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀
+    """
+
+    print(creditos + "\n")
+
+    opcao = input("Sair do programa? (S)im ou (N)ão: ")
+
+    if opcao.upper() == "S":
+        print("Saindo...")
+        return True
+
+    return False
+
+# FIM DA LÓGICA DE CRÉDITOS
 
 # DIRECIONADOR DE OPERAÇÕES
 def opcoes_pagina01(opcao):
-
     if opcao == 1:
         Somar()
     elif opcao == 2:
@@ -176,26 +351,40 @@ def opcoes_pagina01(opcao):
     elif opcao == 8:
         MDC()
     else:
-        print("  Opção inválida!")
+        print("Opção inválida!")
         EsperaTecla()
 
-def opcoes_pagina02(opcao):
+def opcoes_pagina02(opcao):        
     if opcao == 1:
-        soma()
+        EstimaPI()
     elif opcao == 2:
-        sub()
+        EstimaEuler()
     elif opcao == 3:
-        mult()
+        Nothing()
     elif opcao == 4:
-        div()
+        Nothing()
+    elif opcao == 5:
+        Nothing()
+    elif opcao == 6:
+        Nothing()
+    elif opcao == 7:
+        Nothing()
+    elif opcao == 8:
+        sair = Creditos()
+    else:
+        print("Opção inválida!")
+        EsperaTecla()
+    
+    return sair
 # FINAL DA LÓGICA DE DIRECIONAMENTO DE OPÇÕES
 
 # LÓGICA "MAIN" DO PROGRAMA PYTHON
 def start():
     pagina = 1
     opcao = -1
+    sair = False
 
-    while True:
+    while not sair:
         print(paginas(pagina))
 
         opcao = int(input("Opção desejada: "))
@@ -207,7 +396,7 @@ def start():
             if pagina == 1:
                 opcoes_pagina01(opcao)
             elif pagina == 2:
-                opcoes_pagina02(opcao)
+                sair = opcoes_pagina02(opcao)
             else:
                 print("Opção digitada é inválida")
         if opcao == 9:
