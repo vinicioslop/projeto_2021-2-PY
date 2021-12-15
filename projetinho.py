@@ -58,8 +58,6 @@ def EsperaTecla():
 
 # LÓGICA DE SOMA
 def Somar():
-    console
-
     barra = """
     +**************************************************+
     | ████████████████████ SOMA ██████████████████████ |
@@ -315,12 +313,12 @@ def Creditos():
     creditos = """
      ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄   Projetinho realizado para finalização
     █────────▄▄▄▄▄▄────────█  do módulo de programação em .NET C#,
-    █──────█▀──────▀█──────█  agora uma versão desenvolvida usando
-    █─────█─▄▀█──█▀▄─█─────█  a linguagem Python.
-    █────▐▌──────────▐▌────█  
-    █────█▌▀▄──▄▄──▄▀▐█────█  user: vinicioslop
-    █───▐██──▀▀──▀▀──██▌───█  link: https://vinicioslop.github.io/projeto_2021-2/
-    █──▄████▄──▐▌──▄████▄──█
+    █──────█▀      ▀█──────█  agora uma versão desenvolvida usando
+    █─────█ ▄▀█  █▀▄ █─────█  a linguagem Python.
+    █────▐▌          ▐▌────█  
+    █────█▌▀▄  ▄▄  ▄▀▐█────█  user: vinicioslop
+    █───▐██  ▀▀  ▀▀  ██▌───█  link: https://vinicioslop.github.io/projeto_2021-2/
+    █──▄████▄  ▐▌  ▄████▄──█
      ▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀
     """
 
